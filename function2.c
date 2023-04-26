@@ -1,8 +1,8 @@
 #include "main.h"
 /****************** PRINT POINTER ******************/
 /**
- * print_pointer - Prints pointer variable
- * @types: List a of arguments
+ * print_pointer - Prints value pointer variable
+ * @types: List arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -44,13 +44,13 @@ width, flags, padd, extra_c, padd_start));
 }
 /************************* PRINT NON PRINTABLE *************************/
 /**
- * print_non_printable - Prints ascii codes in hexa of unprintable chars
- * @types: Lista of arguments
+ * print_non_printable - Prints ascii codes in hexa of non printable chars
+ * @types: List of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
  * @precision: Precision specification
- * @size: Size value
+ * @size: Size specifier
  * Return: Number of chars printed
  */
 int print_non_printable(va_list types, char buffer[],

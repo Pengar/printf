@@ -1,10 +1,11 @@
 #include "main.h"
 
+/************************* PRINT UNSIGNED NUMBER *************************/
 /**
- * print unsigned - Prints unsigned number
- * @types: argumenet list
+ * print_unsigned - Prints unsigned number
+ * @types: List of arguments
  * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
+ * @flags: Calculates active flags
  * @width: get width
  * @precision: Precision specification
  * @size: Size specifier
@@ -28,9 +29,10 @@ num /= 10;
 i++;
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
+/************* PRINT UNSIGNED NUMBER IN OCTAL  ****************/
 /**
- * print octal - Prints an unsigned number in octal notation
- * @types: Lista of arguments
+ * print_octal - Prints an unsigned number in octal notation
+ * @types: List of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -59,9 +61,10 @@ buffer[i--] = '0';
 i++;
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
+/************** PRINT UNSIGNED NUMBER IN HEXADECIMAL **************/
 /**
- * print hexadecimal - Prints unsigned number in hexadecimal notation
- * @types: Lista of arguments
+ * print_hexadecimal - Prints unsigned number in hexadecimal notation
+ * @types: List of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -75,9 +78,10 @@ int flags, int width, int precision, int size)
 return (print_hexa(types, "0123456789abcdef", buffer,
 flags, 'x', width, precision, size));
 }
+/************* PRINT UNSIGNED NUMBER IN UPPER HEXADECIMAL **************/
 /**
- * print hexa upper - Prints an unsigned number in upper hexadecimal notation
- * @types: Lista of arguments
+ * print_hexa_upper - Prints unsigned number in upper hexadecimal notation
+ * @types: List of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -91,12 +95,13 @@ int flags, int width, int precision, int size)
 return (print_hexa(types, "0123456789ABCDEF", buffer,
 flags, 'X', width, precision, size));
 }
+/************** PRINT HEXX NUM IN LOWER OR UPPER **************/
 /**
- * print hexa - Prints a hexadecimal number in lower or upper
+ * print_hexa - Prints a hexadecimal number in lower or upper
  * @types: Lista of arguments
  * @map_to: Array of values to map the number to
  * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
+ * @flags: Calculates active flags
  * @flag_ch: Calculates active flags
  * @width: get width
  * @precision: Precision specification
