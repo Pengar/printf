@@ -1,8 +1,7 @@
 #include "main.h"
 
-/************************* PRINT UNSIGNED NUMBER *************************/
 /**
- * print_unsigned - Prints unsigned number
+ * print unsigned - Prints unsigned number
  * @types: argumenet list
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -29,9 +28,8 @@ num /= 10;
 i++;
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
-/************* PRINT UNSIGNED NUMBER IN OCTAL  ****************/
 /**
- * print_octal - Prints an unsigned number in octal notation
+ * print octal - Prints an unsigned number in octal notation
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -61,9 +59,8 @@ buffer[i--] = '0';
 i++;
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
-/************** PRINT UNSIGNED NUMBER IN HEXADECIMAL **************/
 /**
- * print_hexadecimal - Prints unsigned number in hexadecimal notation
+ * print hexadecimal - Prints unsigned number in hexadecimal notation
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -78,9 +75,8 @@ int flags, int width, int precision, int size)
 return (print_hexa(types, "0123456789abcdef", buffer,
 flags, 'x', width, precision, size));
 }
-/************* PRINT UNSIGNED NUMBER IN UPPER HEXADECIMAL **************/
 /**
- * print_hexa_upper - Prints an unsigned number in upper hexadecimal notation
+ * print hexa upper - Prints an unsigned number in upper hexadecimal notation
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -95,9 +91,8 @@ int flags, int width, int precision, int size)
 return (print_hexa(types, "0123456789ABCDEF", buffer,
 flags, 'X', width, precision, size));
 }
-/************** PRINT HEXX NUM IN LOWER OR UPPER **************/
 /**
- * print_hexa - Prints a hexadecimal number in lower or upper
+ * print hexa - Prints a hexadecimal number in lower or upper
  * @types: Lista of arguments
  * @map_to: Array of values to map the number to
  * @buffer: Buffer array to handle print
